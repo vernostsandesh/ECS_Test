@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - ws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 834618721642.dkr.ecr.us-east-2.amazonaws.com
+      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 834618721642.dkr.ecr.us-east-2.amazonaws.com
   build:
     commands:
       - docker build -t sandytest:latest . 
