@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 834618721642.dkr.ecr.us-east-2.amazonaws.com/sandytest:latest
-      - printf '[{"name":sample,"imageUri":"%s"}]' 834618721642.dkr.ecr.us-east-2.amazonaws.com/sandytest:latest > imagedefinitions.json
+      - printf '[{"name":sample,"imageUri":"%s"}]' 834618721642.dkr.ecr.us-east-2.amazonaws.com/sandytest:latest > newimagedefinitions.json
 artifacts:
-  files: imagedefinitions.json
+  files: newimagedefinitions.json
